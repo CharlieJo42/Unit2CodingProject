@@ -1,0 +1,18 @@
+Routes
+
+Two tables are "user" table and "water" table
+GET/water
+POST/water
+GET/water/new
+GET/water/:id
+PUT/water/:id
+GET/water/:id/edit
+DELETE/water/:id
+
+GET/auth/login
+GET/auth/logout
+post/user
+GET/user
+GET/auth/register (which equals GET/user/new)
+
+
