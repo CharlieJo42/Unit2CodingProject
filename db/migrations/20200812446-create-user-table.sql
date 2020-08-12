@@ -1,5 +1,6 @@
-CREATE TABLE IF NOT EXISTS user_table 
+CREATE TABLE IF NOT EXISTS user_table (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     status BOOLEAN NOT NULL DEFAULT false,
-    email VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL
+);
