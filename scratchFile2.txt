@@ -1,0 +1,19 @@
+GET /(index/homepage)
+
+water log page
+
+GET /water
+POST /water
+GET /water/new
+GET /water/:id 
+PUT /water/:id 
+GET /water/:id/edit
+DELETE /water/:id 
+
+once I get to the authorization stage:
+
+GET /auth/login
+GET /auth/logout
+POST /user
+GET /user
+GET /user/new
