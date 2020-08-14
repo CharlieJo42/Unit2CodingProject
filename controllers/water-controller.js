@@ -10,3 +10,5 @@ const waterController = {
         }).catch(next);
     },
 }
+
+module.exports = waterController;
