@@ -1,6 +1,8 @@
 const express = require('express');
 const logger = require('morgan');
 
+const waterLogRouter = require('./routes/waterLogRouter');
+
 const app = express();
 
 app.use(logger('dev'));
@@ -13,6 +15,8 @@ console.log('listening on port ${PORT}');
 app.get('/', (req, res) => {
 res.send('Hello World');
 });
+
+app.use('/water', waterLogRouter);
 
 app.use('*', (req, res) => {
 res.status(404).send('Not found');
