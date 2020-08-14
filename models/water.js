@@ -15,6 +15,9 @@ class water {
     }
 }
 
+
+module.exports = water;
+
 class user {
     constructor(user){
         this.id = user.id || null;
@@ -31,3 +34,5 @@ class user {
         })
     }
 }
+
+module.exports = user;
