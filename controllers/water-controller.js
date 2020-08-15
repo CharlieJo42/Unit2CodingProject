@@ -9,6 +9,10 @@ const waterController = {
             });
         }).catch(next);
     },
+
+    create(req, res, next) {
+
+    },
 }
 
-module.exports = waterController;
+module.exports = waterController; 
