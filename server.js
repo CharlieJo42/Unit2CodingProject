@@ -16,7 +16,7 @@ console.log('listening on port ${PORT}');
 });
 
 app.get('/', (req, res) => {
-res.send('Hello World');
+res.render('index'));
 });
 
 app.use('/water', waterLogRouter);
