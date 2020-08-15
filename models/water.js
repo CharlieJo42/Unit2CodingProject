@@ -15,7 +15,7 @@ class water {
 
     save(){
         return db.one(`INSERT INTO water (id, integer) 
-        VALUES ($/id/, $/integer/) RETURNING *`).then(todo =>
+        VALUES ($/id/, $/integer/) RETURNING *`, this).then(todo =>
             Object.assign(this, todo));
     }; 
     }
@@ -41,7 +41,7 @@ class user {
     }
     save() {
         return db.one(`INSERT INTO user (id, name, status, email) VALUES ($/id/, $/name/, $/status/, $/email/)
-            RETURNING *`).then(todo =>
+            RETURNING *`, this).then(todo =>
                 Object.assign(this, todo));
     }
 }
