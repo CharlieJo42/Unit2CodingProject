@@ -11,7 +11,10 @@ const waterController = {
     },
 
     create(req, res, next) {
-
+            new water(req.body).save()
+            .then(todo => {
+                res.json({ todo })
+            }).catch(next)
     },
 }
 
