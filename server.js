@@ -2,6 +2,10 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('passport');
+
 const waterLogRouter = require('./routes/waterLogRouter');
 
 const app = express();
@@ -11,7 +15,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
-
+app.use(cookieParser());
+app.use(session({
+    secret: process.env.SECRET_KEY,
+    resave: false,
+    saveUninitlized: true,
+})
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.set('views', 'views');
 app.set('view engine', 'ejs');
