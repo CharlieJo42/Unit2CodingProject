@@ -19,15 +19,14 @@ static getById(id){
         .then(water) => {
             if (water) return new this(water);
             else throw new Error ('No water logged');
-        })
-    }
+        });
+    },
 
     save(){
         return db.one(`INSERT INTO water (id, integer) 
         VALUES ($/id/, $/integer/) RETURNING *`, this).then(todo =>
             Object.assign(this, todo));
     }; 
-    }
 };
 
 
