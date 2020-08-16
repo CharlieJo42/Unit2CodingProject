@@ -5,7 +5,7 @@ const usersController = {
     index(req, res, next) {
         res.json({
             message: "put the entire ocean here!",
-            user,
+            user: req.user,
         })
     }
     create(req, res, next) {
