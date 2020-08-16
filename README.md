@@ -1,3 +1,5 @@
+***Code has been typed up from following along with the tutorial video and with instructor's prior knowledge***
+
 "Water Logged" is intended to be a functional app for companies to incentivize their employees to take care of their health whilst simultaneously providing additional resources to charity.
 
 Premise: For every ounce of water an employee drinks (and then logs under their specific user account), the company will donate one penny towards funding a clean-drinking-water charity. To prevent cheating or health issues, the amount of daily loggable water intake caps out at 72 ounces per user, per day. 
