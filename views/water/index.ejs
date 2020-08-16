@@ -15,8 +15,9 @@ Drink some water!
     </div>
     <div class="category-actions">
         <h5><%= water.category %></h5>
-        <div class="actions"><a class="buttonlike" 
-            href="/water/<%= water.id %>">Info</a></div>
+        <div class="actions">
+            <a class="buttonlike" href="/water/<%= water.id %>">Info</a>
+            <a class="buttonlike" href="/water/<%= water.id/edit %>">Edit</a></div>
     </div>
 </div>
 <% }) %>
