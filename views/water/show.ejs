@@ -1,9 +1,15 @@
 <%- include('../partials/boilerplate') %>
 
-TITLE: <%- water.title %>
-STATUS: <% if (water.status) { %>
+
+<h3>TITLE: <%- water.title %></h3>
+<p>STATUS: <% if (water.status) { %>
 Done
 <% } else { %>
 Not Done 
-<% } %>
+<% } %></p>
+
+<p>AMOUNT: <%- water.amount %></p>
+
+<a href="/water">Back to the main page!</a>
+
 <%- include('../partials/end') %>
