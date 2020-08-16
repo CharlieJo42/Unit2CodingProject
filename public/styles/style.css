@@ -18,6 +18,10 @@ main {
 }
 
 header {
+    background-color: rgb(5, 52, 105);
+
+}
+.header-container {
     width: 80vw;
     max-width: 1000px;
     margin: 0 auto;
@@ -25,11 +29,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    color: white;
 }
 
 .logo {
     font-size: 2em;
     font-weight: bold;
+    color: white;
 }
 
 nav ul {
@@ -39,9 +45,21 @@ nav ul {
 
 nav ul li {
     margin: 0 10px;
+    color: rgb(125, 241, 221);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 footer {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(5, 52, 105);
+
 }
+
+/*125, 241, 221*/
