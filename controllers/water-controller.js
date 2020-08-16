@@ -34,7 +34,19 @@ const waterController = {
 }}
 
 update(req, res, next) {
-    console.log(req.body);
+    let incomingStatus = false;
+    if (req.body.status === 'done'){
+        incomingStatus= = true;
+    }
+    water.getById(req.params.id)
+    .then(foundWater => {
+        foundWater.updatw({
+            id: req.body.id,
+            amount: incomingStatus
+        });
+    }).then(updatedWater => {
+        res.redirect(`/water/${updatedWater.id}`);
+    }).catch(next);
     res.send('update here');
 }
 

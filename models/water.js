@@ -31,9 +31,9 @@ static getById(id){
     update(changes) {
         Object.assign(this, changes);
         return.db.one(`UPDATE water SET 
-            id = $/id/,
-            amount = $/amount/
-            RETURNING *`, this).then((water) =>
+            amount = $/amount/,
+            WHERE id = $/id/,
+            RETURNING * `, this).then((water) =>
             Object.assign(this, todo));
     }
 };
