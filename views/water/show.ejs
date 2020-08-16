@@ -10,6 +10,10 @@ Not Done
 
 <p>AMOUNT: <%- water.amount %></p>
 
+<form method="POST" action="/todos/<%= todo.id %>?_method=DELETE">
+<input type="submit" value="delete this water log">
+</form>
+
 <a href="/water">Back to the main page!</a>
 
 </div>

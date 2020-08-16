@@ -1,4 +1,5 @@
 const water = require ('../models/water');
+const { delete } = require('../routes/water-log-router');
 
 const waterController = {
     index(req, res, next) {
@@ -47,7 +48,16 @@ update(req, res, next) {
     }).then(updatedWater => {
         res.redirect(`/water/${updatedWater.id}`);
     }).catch(next);
-    res.send('update here');
+   
 }
+
+delete(req, res, next) {
+    water.getById(req.params.id)
+    .then(water => {
+        return water.delete();
+    }).then(() => {
+        res.redirect('/water');
+    }).catch(next);
+};
 
 module.exports = waterController; 
