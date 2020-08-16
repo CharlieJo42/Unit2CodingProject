@@ -19,5 +19,5 @@ waterLogRouter.get('/:id([0-9]+)/edit', waterController.show, (req, res) => {
     })
 });
 waterLogRouter.put('/:id([0-9]+)', waterController.update);
-
+waterLogRouter.delete('/:id([0-9]+)', waterController.delete);
 module.exports = waterLogRouter;

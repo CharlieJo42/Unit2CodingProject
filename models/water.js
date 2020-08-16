@@ -60,7 +60,12 @@ class user {
         return db.one(`INSERT INTO user (id, name, status, email) VALUES ($/id/, $/name/, $/status/, $/email/)
             RETURNING *`, this).then(todo =>
                 Object.assign(this, todo));
-    }
+
+            }
+delete (){
+    return db.none('DELETE FROM water WHERE id = $1', this.id);
 }
+        }
+
 
 module.exports = user;
