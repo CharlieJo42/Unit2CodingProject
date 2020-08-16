@@ -8,6 +8,15 @@ waterLogRouter.get('/new', (req, res) => {
     res.render('todos/new');
 });
 
-waterLogRouter.get('/:id([0-9]+', waterController.show);
+waterLogRouter.get('/:id([0-9]+)', waterController.show, (req, res) =>{
+res.render('water/show', {
+    water. res.locals.water,
+})
+});
+waterLogRouter.get('/:id([0-9]+)/edit', waterController.show, (req, res) => {
+    res.render('water/edit', {
+        water: res.locals.water,
+    })
+});
 
 module.exports = waterLogRouter;
