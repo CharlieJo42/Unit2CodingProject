@@ -23,6 +23,14 @@ const waterController = {
                 res.json({ todo })
             }).catch(next)
     },
-}
+
+    show(req, res, next) {
+        water.getById(req.params.id)
+        .then((water) => {
+            res.render('water/show', { water });
+        })
+        .catch(next);
+
+}}
 
 module.exports = waterController; 

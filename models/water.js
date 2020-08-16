@@ -12,6 +12,15 @@ class water {
         .then(water =>{
             return water.map(water => new this(water));
         });
+    }
+
+static getById(id){
+    return db.oneOrNone('SELECT * FROM water WHERE id = $1', id)
+        .then(water) => {
+            if (water) return new this(water);
+            else throw new Error ('No water logged');
+        })
+    }
 
     save(){
         return db.one(`INSERT INTO water (id, integer) 
