@@ -71,7 +71,7 @@ footer {
 }
 
 .water-wrapper {
-    max-width: 1000px;
+    max-width: 600px;
     width: 80vw;
     margin: auto;
 }
@@ -81,11 +81,12 @@ footer {
     border: 1 px solid rgb(5, 52, 105);
 }
 
-.title-status {
+.title-status, .category-actions {
     display: flex;
     justify-content: space-between;
     padding: 15px;
     border-bottom: 1 px solid rgb(5, 52, 105);
+    align-items: center;
 }
 
 .title-status h3 {

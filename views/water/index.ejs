@@ -3,7 +3,7 @@
 <div class="water-wrapper">
 Drink some water! 
 <a href="/water/new" class="buttonlike">Add your water intake!</a>
-<% water.forEach(water => <% 
+<% water.forEach(water => { <% 
 <div class="water intake">
     <div class="title-status">
         <h3><%= water.title %></h3>
@@ -18,6 +18,6 @@ Drink some water!
         <div class="actions">All actions go here!</div>
     </div>
 </div>
-<% ) %>
+<% }) %>
 
 <%- include('../partials/end') %>
