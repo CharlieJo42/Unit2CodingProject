@@ -1,0 +1,11 @@
+<%- include('../partials/boilerplate') %>
+
+<form method='POST' action='/water/<%= water.id %>?_method=PUT'>
+<input type="text" name="amount" placeholder="Amount" value="<%= water.title %>">
+<input type="text" name="measurement" placeholder="Measurement" value="<%= water.measurement %>">
+<textarea name="description" placeholder="Description"></textarea>
+<label for="waterdrank">Mark as accomplished?</label>
+<input type="checkbox" id="waterdrank" value="done" name="status">
+<input type="submit" value="Log your water intake">
+</form>
+<%- include('../partials/end') %>
