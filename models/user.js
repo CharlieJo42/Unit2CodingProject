@@ -28,3 +28,5 @@ class User {
         .then((savedUser) => Object.assign(this, savedUser));
     }
 }
+
+module.exports = User; 
