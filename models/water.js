@@ -26,7 +26,16 @@ static getById(id){
         return db.one(`INSERT INTO water (id, integer) 
         VALUES ($/id/, $/integer/) RETURNING *`, this).then(todo =>
             Object.assign(this, todo));
-    }; 
+    }
+    
+    update(changes) {
+        Object.assign(this, changes);
+        return.db.one(`UPDATE water SET 
+            id = $/id/,
+            amount = $/amount/
+            RETURNING *`, this).then((water) =>
+            Object.assign(this, todo));
+    }
 };
 
 

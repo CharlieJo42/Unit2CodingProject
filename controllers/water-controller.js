@@ -33,4 +33,9 @@ const waterController = {
 
 }}
 
+update(req, res, next) {
+    console.log(req.body);
+    res.send('update here');
+}
+
 module.exports = waterController; 

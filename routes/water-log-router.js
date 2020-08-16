@@ -18,5 +18,6 @@ waterLogRouter.get('/:id([0-9]+)/edit', waterController.show, (req, res) => {
         water: res.locals.water,
     })
 });
+waterLogRouter.put('/:id([0-9]+)', waterController.update);
 
 module.exports = waterLogRouter;
