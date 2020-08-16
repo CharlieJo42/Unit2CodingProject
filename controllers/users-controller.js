@@ -2,6 +2,12 @@ const bcrypt = require('bcrypt.js');
 const User = require('../models/User');
 
 const usersController = {
+    index(req, res, next) {
+        res.json({
+            message: "put the entire ocean here!",
+            user,
+        })
+    }
     create(req, res, next) {
         const salt = bcrypt.gelSaltSync();
         const hash = bcrypt.hashSync(req.body.password, salt);

@@ -3,10 +3,9 @@ const userRouter = express.Router();
 
 const authHelpers = require('../services/auth/auth-helpers');
 
-userRouter.get('/', (req, res) => {
-    res.send('put a map of the oceans here or something');
+userRouter.get('/', usersController.index);
 })
-userRouter.get("/new", authHelpers.loginREdirect, (req, res) => {
+userRouter.get("/new", authHelpers.loginRedirect, (req, res) => {
     res.render('auth/register');
 });
 
