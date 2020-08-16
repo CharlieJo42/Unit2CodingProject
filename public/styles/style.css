@@ -51,6 +51,14 @@ nav ul li {
     letter-spacing: 1px;
 }
 
+a:visited {
+    color: inherit; 
+}
+
+a {
+    text-decoration: none;
+}
+
 footer {
     display: flex;
     align-items: center;
@@ -62,4 +70,9 @@ footer {
 
 }
 
+.water-wrapper {
+    max-width: 1000px;
+    width: 80vw;
+    margin: auto;
+}
 /*125, 241, 221*/

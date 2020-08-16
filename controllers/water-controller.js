@@ -4,8 +4,8 @@ const waterController = {
     index(req, res, next) {
         water.getAll()
         .then(water => {
-            res.json ({
-                water
+            res.render('water/index', {
+                water,
             });
         }).catch(next);
     },

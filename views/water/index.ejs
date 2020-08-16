@@ -1,3 +1,13 @@
 <%- include('../partials/boilerplate') %>
 
+<div class="water-wrapper">
+Drink some water! 
+<a href="/water/new" class="buttonlike">Add your water intake!</a>
+<% water.forEach(water => <% 
+<div class="water intake">
+    <div class="title-status"></div>
+    <div class="category-actions"></div>
+</div>
+<% ) %>
+
 <%- include('../partials/end') %>
