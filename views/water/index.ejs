@@ -5,8 +5,18 @@ Drink some water!
 <a href="/water/new" class="buttonlike">Add your water intake!</a>
 <% water.forEach(water => <% 
 <div class="water intake">
-    <div class="title-status"></div>
-    <div class="category-actions"></div>
+    <div class="title-status">
+        <h3><%= water.title %></h3>
+        <p><% if (todo.status) { %>
+            Done
+        <% } else { <%
+        Not Done
+    <% } %>            
+    </div>
+    <div class="category-actions">
+        <h5><%= water.category %></h5>
+        <div class="actions">All actions go here!</div>
+    </div>
 </div>
 <% ) %>
 
