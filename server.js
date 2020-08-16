@@ -6,7 +6,10 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 
+
+const authRouter = require('./routes/auth-router');
 const waterLogRouter = require('./routes/water-log-router');
+const userRouter = require('./routes/user-router');
 
 const app = express();
 
@@ -40,6 +43,8 @@ res.render('index');
 });
 
 app.use('/water', waterLogRouter);
+app.use('/auth', authRouter);
+app.use('/user', userRouter);
 
 app.use('*', (req, res) => {
 res.status(404).send('Not found');
